@@ -232,6 +232,9 @@ def trees_convert(obj, filename):
             else:
                 entry['url'] = 'linux-next'
 
+        if action.type == 'merge':
+            entry['branch'] = action.branch
+
         if hasattr(action, 'contacts') and action.contacts:
             entry['contacts'] = action.contacts
 

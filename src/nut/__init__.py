@@ -265,8 +265,8 @@ class ControlFile:
                     action = ActionMerge(name, url, branch, contacts, flags, remote)
                 elif action == 'switch':
                     branch = entry['branch']
-                    target = entry['target']
-                    action = ActionSwitch(branch, target)
+                    base = entry['base']
+                    action = ActionSwitch(branch, base)
                 elif action == 'branch':
                     action = ActionBranch(params)
                 else:
