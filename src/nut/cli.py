@@ -74,11 +74,6 @@ def cli(ctx):
 KERNEL_GIT = 'git://git.kernel.org'
 KERNEL_SSH = 'ssh://git@gitolite.kernel.org'
 
-ORIGIN = f'{KERNEL_GIT}/pub/scm/linux/kernel/git/torvalds/linux.git'
-
-TOOLS_GIT = 'git://git.kernel.org/pub/scm/utils/next-utils/tools.git'
-TOOLS_SSH = 'ssh://git@gitolite.kernel.org/pub/scm/utils/next-utils/tools.git'
-
 repositories = [
         Repository(
             path = 'etc',
@@ -89,7 +84,7 @@ repositories = [
                     branch = 'main',
                     url = f'{KERNEL_GIT}/pub/scm/utils/next-utils/etc.git',
                     fetch = [ '+refs/heads/*:refs/remote/origin/*' ],
-                    pushurl = f'{KERNEL_SSH}/pub/scm/utils/next-utils/etc.git'
+                    pushurl = f'{KERNEL_SSH}:pub/scm/utils/next-utils/etc.git'
                 )
             ]
         ),
