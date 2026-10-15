@@ -240,7 +240,7 @@ def trees_convert(obj, filename):
 
         actions.append(entry)
 
-    with open('control.yml', 'w') as fobj:
+    with open(filename.parent / 'control.yml', 'w') as fobj:
         yaml.dump(actions, fobj, Dumper = nut.ActionDumper, sort_keys = False,
                   allow_unicode = True)
 
